@@ -1,4 +1,4 @@
-package com.API.utils;
+package com.API.requestbuilder;
 import static io.restassured.RestAssured.*;
 
 import io.restassured.http.ContentType;

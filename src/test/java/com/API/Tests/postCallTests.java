@@ -3,11 +3,16 @@ package com.API.Tests;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
+import com.API.constants.FCwithSingleton;
+import com.API.constants.FrameworkConstant;
 import com.API.pojo.Employee;
-import com.API.utils.RequestBuilder;
+import com.API.requestbuilder.RequestBuilder;
 import com.API.utils.ApiUtils;
 
 import static com.API.utils.RandomUtils.*;
+
+import java.lang.reflect.Method;
+
 import io.restassured.response.Response;
 import com.API.utils.RandomUtils;
 
@@ -36,9 +41,9 @@ public final class postCallTests {
 	}
 	
 	@Test
-	public void postRequestUsingExtrnalFile() {
+	public void postRequestUsingExtrnalFile(Method method) {
 		String resource=ApiUtils
-				.readJsonAndGetAsString(System.getProperty("user.dir" + "./Jsons/request.json"))
+				.readJsonAndGetAsString(FCwithSingleton.getInstance() + method.getName())
 				.replace("fname", RandomUtils.getFirstname())
 				.replace("id", String.valueOf(getId()));
 		
@@ -46,6 +51,9 @@ public final class postCallTests {
 				.buildRequestForPostCalls()
 				.body(resource)
 				.post("/employees");
+		response.prettyPrint();
+		
+		ApiUtils.storeStringAsJson(FCwithSingleton.getInstance() + method.getName()+ "response.json", response);
 		
 		Assertions.assertThat(response.getStatusCode()).isEqualTo(201);		
 	}

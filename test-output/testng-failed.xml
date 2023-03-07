@@ -5,7 +5,7 @@
     <classes>
       <class name="com.API.Tests.postCallTests">
         <methods>
-          <include name="postCallTest"/>
+          <include name="postRequestUsingExtrnalFile"/>
         </methods>
       </class> <!-- com.API.Tests.postCallTests -->
     </classes>

@@ -3,7 +3,7 @@ package com.API.Tests;
 import static org.assertj.core.api.Assertions.*;
 import org.testng.annotations.Test;
 
-import com.API.utils.RequestBuilder;
+import com.API.requestbuilder.RequestBuilder;
 
 import io.restassured.response.Response;
 
