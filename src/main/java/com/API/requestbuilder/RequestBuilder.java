@@ -3,6 +3,8 @@ import static io.restassured.RestAssured.*;
 
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import com.API.utils.ProportyUtils;
+
 public final class RequestBuilder {
 	
 	private RequestBuilder() {
@@ -11,7 +13,7 @@ public final class RequestBuilder {
 	
 	public static RequestSpecification buildRequestForGetCalls() {
 		return given()
-				.baseUri("http://localhost:3000")
+				.baseUri(ProportyUtils.getValue(""))
 				.log()
 				.all();
 	}
