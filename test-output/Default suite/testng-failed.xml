@@ -5,7 +5,7 @@
     <classes>
       <class name="com.API.Tests.DataProviderTest">
         <methods>
-          <include name="dbTest"/>
+          <include name="dbTest" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- com.API.Tests.DataProviderTest -->
     </classes>
