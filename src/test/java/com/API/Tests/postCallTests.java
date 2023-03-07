@@ -1,15 +1,15 @@
 package com.API.Tests;
 
-import static io.restassured.RestAssured.given;
-
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
 import com.API.pojo.Employee;
-import static com.API.utils.RandomUtils.*;
+import com.API.utils.RequestBuilder;
+import com.API.utils.ApiUtils;
 
-import io.restassured.http.ContentType;
+import static com.API.utils.RandomUtils.*;
 import io.restassured.response.Response;
+import com.API.utils.RandomUtils;
 
 
 public final class postCallTests {
@@ -23,17 +23,29 @@ public final class postCallTests {
 		Employee employee=Employee
 				.builder()
 				.setId(getId())
-				.setFname(getFname())
-				.setLname(getLname())
+				.setFname(getFirstname())
+				.setLname(getLastname())
 				.build();
 		
-		Response response=given().baseUri("http://localhost:3000")
-		.contentType(ContentType.JSON)
-		.header("",ContentType.JSON)
-		.log()
-		.all()
-		.body(employee)
-		.post("/employees");
+		Response response=RequestBuilder
+				.buildRequestForPostCalls()
+				.body(employee)
+				.post("/employees");
+		
+		Assertions.assertThat(response.getStatusCode()).isEqualTo(201);		
+	}
+	
+	@Test
+	public void postRequestUsingExtrnalFile() {
+		String resource=ApiUtils
+				.readJsonAndGetAsString(System.getProperty("user.dir" + "./Jsons/request.json"))
+				.replace("fname", RandomUtils.getFirstname())
+				.replace("id", String.valueOf(getId()));
+		
+		Response response=RequestBuilder
+				.buildRequestForPostCalls()
+				.body(resource)
+				.post("/employees");
 		
 		Assertions.assertThat(response.getStatusCode()).isEqualTo(201);		
 	}

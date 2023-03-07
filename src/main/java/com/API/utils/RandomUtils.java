@@ -9,11 +9,11 @@ public final class RandomUtils {
 		return FakerUtils.getNubmer(100, 1000);	
 	}
 	
-	public static String getFname() {
+	public static String getFirstname() {
 		return FakerUtils.getFirstName();
 	}
 	
-	public static String getLname() {
+	public static String getLastname() {
 		return FakerUtils.getLastName();
 	}
 

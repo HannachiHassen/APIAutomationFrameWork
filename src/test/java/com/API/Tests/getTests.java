@@ -3,7 +3,7 @@ package com.API.Tests;
 import static org.assertj.core.api.Assertions.*;
 import org.testng.annotations.Test;
 
-import com.API.utils.ApiUtils;
+import com.API.utils.RequestBuilder;
 
 import io.restassured.response.Response;
 
@@ -12,8 +12,8 @@ public final class getTests {
 	@Test 
 	public void getEmployeesDetails() {
 		
-		Response response=ApiUtils
-				.buildRequestForGetCall()
+		Response response=RequestBuilder
+				.buildRequestForGetCalls()
 				.get("/employees");  //class or config.properties	
 		response.prettyPrint();
 		
@@ -28,8 +28,8 @@ public final class getTests {
 	@Test 
 	public void getEmployeeDetails() {
 		
-		Response response=ApiUtils
-				.buildRequestForGetCall()							
+		Response response=RequestBuilder
+				.buildRequestForGetCalls()							
 				.pathParam("id", 2)
 				.get("/employees/{id}");  //class or config.properties	
 		response.prettyPrint();

@@ -1,17 +1,17 @@
 package com.API.utils;
-import static io.restassured.RestAssured.*;
 
-import io.restassured.specification.RequestSpecification;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import lombok.SneakyThrows;
+
 public final class ApiUtils {
-	
+
 	private ApiUtils() {
-		
 	}
-	
-	public static RequestSpecification buildRequestForGetCall() {
-		return given()
-				.baseUri("http://localhost:3000")
-				.log()
-				.all();
+
+	@SneakyThrows
+	public static String readJsonAndGetAsString(String filepath) {
+		return new String(Files.readAllBytes(Paths.get(filepath)));		
 	}
 }
