@@ -6,6 +6,7 @@ import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
 import com.API.pojo.Employee;
+import static com.API.utils.RandomUtils.*;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -21,9 +22,9 @@ public final class postCallTests {
 	public void postCallTest() {
 		Employee employee=Employee
 				.builder()
-				.setId(325)
-				.setFname("brahim")
-				.setLname("hamis")
+				.setId(getId())
+				.setFname(getFname())
+				.setLname(getLname())
 				.build();
 		
 		Response response=given().baseUri("http://localhost:3000")
@@ -36,5 +37,4 @@ public final class postCallTests {
 		
 		Assertions.assertThat(response.getStatusCode()).isEqualTo(201);		
 	}
-
 }
