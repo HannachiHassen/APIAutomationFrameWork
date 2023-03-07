@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 07 11:32:17 EST 2023</td>
+<td>Started on:</td><td>Tue Mar 07 14:16:40 EST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (126 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (275 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,17 +75,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.API.Tests.postCallTests.postRequestUsingExtrnalFile()'><b>postRequestUsingExtrnalFile</b><br>Test class: com.API.Tests.postCallTests</td>
-<td><div><pre>java.nio.file.NoSuchFileException: C:\Users\HASSEN\eclipse-workspace\APIAutomationFrameWorkJsons\request.json
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
-	at java.base/java.nio.file.Files.readAllBytes(Files.java:3288)
-	at com.API.utils.ApiUtils.readJsonAndGetAsString(ApiUtils.java:16)
-	at com.API.Tests.postCallTests.postRequestUsingExtrnalFile(postCallTests.java:41)
+<td title='com.API.Tests.DataProviderTest.dbTest()'><b>dbTest</b><br>Test class: com.API.Tests.DataProviderTest</td>
+<td><div><pre>java.lang.AssertionError: 
+expected: false
+ but was: true
+	at com.API.Tests.DataProviderTest.dbTest(DataProviderTest.java:14)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -114,17 +108,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace915416632", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace915416632'><pre>java.nio.file.NoSuchFileException: C:\Users\HASSEN\eclipse-workspace\APIAutomationFrameWorkJsons\request.json
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
-	at java.base/java.nio.file.Files.readAllBytes(Files.java:3288)
-	at com.API.utils.ApiUtils.readJsonAndGetAsString(ApiUtils.java:16)
-	at com.API.Tests.postCallTests.postRequestUsingExtrnalFile(postCallTests.java:41)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1955920234", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1955920234'><pre>java.lang.AssertionError: 
+expected: false
+ but was: true
+	at com.API.Tests.DataProviderTest.dbTest(DataProviderTest.java:14)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -155,7 +143,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.API.Tests.postCallTests@2f112965</td></tr>
+<td>com.API.Tests.DataProviderTest@3c9d0b9d</td></tr>
 </table><p>
 </body>
 </html>

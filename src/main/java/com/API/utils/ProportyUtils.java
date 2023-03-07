@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import com.API.constants.FrameworkConstants;
+import com.API.enums.PropertiesType;
+
 public final class ProportyUtils {
 
 	private ProportyUtils() {	}
@@ -22,7 +25,7 @@ public final class ProportyUtils {
 	 * incorrect exception is propagated to caller before the whole test execution starts
 	 */
 	static {
-		try(FileInputStream inputstream=new FileInputStream (System.getProperty("user.dir")+ "/Config File/config.proporties")){
+		try(FileInputStream inputstream=new FileInputStream (FrameworkConstants.getPROPERTY_CONFIG_PATH())){
 			property.load(inputstream);
 		} 
 		catch (IOException e) {
@@ -36,8 +39,8 @@ public final class ProportyUtils {
 		property.entrySet().forEach(e-> MAP.put(String.valueOf(e.getKey()), String.valueOf(e.getValue())));	
 	}
 	
-	public static String getValue (String key) {
-		return MAP.get(key.toLowerCase());
+	public static String getValue (PropertiesType key) {
+		return MAP.get(key.name().toLowerCase());
 	}
 	
 	/**

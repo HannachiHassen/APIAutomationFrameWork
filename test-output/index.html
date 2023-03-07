@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\HASSEN\AppData\Local\Temp\testng-eclipse--181151984\testng-customsuite.xml</span>
+                    <span>C:\Users\HASSEN\AppData\Local\Temp\testng-eclipse-1878778524\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.API.Tests.postCallTests" class="method navigator-link" hash-for-method="postRequestUsingExtrnalFile">postRequestUsingExtrnalFile</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.API.Tests.DataProviderTest" class="method navigator-link" hash-for-method="dbTest">dbTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,24 +120,18 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.API.Tests.postCallTests</span>
+              <span class="class-name">com.API.Tests.DataProviderTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="postRequestUsingExtrnalFile">
-                  </a> <!-- postRequestUsingExtrnalFile -->
-                  <span class="method-name">postRequestUsingExtrnalFile</span>
-                  <div class="stack-trace">java.nio.file.NoSuchFileException: C:\Users\HASSEN\eclipse-workspace\APIAutomationFrameWorkJsons\request.json
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
-	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
-	at java.base/java.nio.file.Files.readAllBytes(Files.java:3288)
-	at com.API.utils.ApiUtils.readJsonAndGetAsString(ApiUtils.java:16)
-	at com.API.Tests.postCallTests.postRequestUsingExtrnalFile(postCallTests.java:41)
+                  <a name="dbTest">
+                  </a> <!-- dbTest -->
+                  <span class="method-name">dbTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: 
+expected: false
+ but was: true
+	at com.API.Tests.DataProviderTest.dbTest(DataProviderTest.java:14)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -175,7 +169,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\HASSEN\AppData\Local\Temp\testng-eclipse--181151984\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\HASSEN\AppData\Local\Temp\testng-eclipse-1878778524\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -184,11 +178,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.API.Tests.postCallTests&quot;&gt;
+      &lt;class name=&quot;com.API.Tests.DataProviderTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;postRequestUsingExtrnalFile&quot;/&gt;
+          &lt;include name=&quot;dbTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.API.Tests.postCallTests --&gt;
+      &lt;/class&gt; &lt;!-- com.API.Tests.DataProviderTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -230,14 +224,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'postRequestUsingExtrnalFile')
-data.setCell(0, 2, 'com.API.Tests.postCallTests')
-data.setCell(0, 3, 62);
+data.setCell(0, 1, 'dbTest')
+data.setCell(0, 2, 'com.API.Tests.DataProviderTest')
+data.setCell(0, 3, 212);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 62 ms</span>
+              <span class="suite-total-time">Total running time: 212 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -252,16 +246,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.API.Tests.postCallTests</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">postCallTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -270,11 +257,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.API.Tests.postCallTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.API.Tests.DataProviderTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">postRequestUsingExtrnalFile</span>
+                <span class="method-name">dbTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

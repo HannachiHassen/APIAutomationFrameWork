@@ -17,7 +17,7 @@ public final class ApiUtils {
 	}
 	
 	@SneakyThrows
-	public static void storeStringAsJson(String filepath, Response response) {
+	public static void storeStringAsJsonFile(String filepath, Response response) {
 		Files.write(Paths.get(filepath),response.asByteArray());		
 	}
 }

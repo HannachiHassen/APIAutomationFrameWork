@@ -20,6 +20,6 @@ public final class FCwithSingleton {
         return INSTANCE;
     }
 
-    private  final String requestJsonFolderpath = System.getProperty("user.dir") + "/Jsons/jsons/";
+    private  final String requestJsonFolderpath = System.getProperty("user.dir") + "/Jsons/";
     private  final String responseJsonFolderPath = System.getProperty("user.dir") + "/output/";
 }

@@ -3,6 +3,8 @@ import static io.restassured.RestAssured.*;
 
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+
+import com.API.enums.PropertiesType;
 import com.API.utils.ProportyUtils;
 
 public final class RequestBuilder {
@@ -13,7 +15,7 @@ public final class RequestBuilder {
 	
 	public static RequestSpecification buildRequestForGetCalls() {
 		return given()
-				.baseUri(ProportyUtils.getValue(""))
+				.baseUri(ProportyUtils.getValue(PropertiesType.BASEURL))
 				.log()
 				.all();
 	}
