@@ -4,7 +4,6 @@ import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
 import com.API.constants.FCwithSingleton;
-import com.API.constants.FrameworkConstant;
 import com.API.pojo.Employee;
 import com.API.requestbuilder.RequestBuilder;
 import com.API.utils.ApiUtils;
