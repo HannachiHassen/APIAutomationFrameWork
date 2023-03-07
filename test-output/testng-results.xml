@@ -2,12 +2,12 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-06T21:03:27 EST" name="Default suite" finished-at="2023-03-06T21:03:32 EST" duration-ms="5464">
+  <suite started-at="2023-03-06T21:15:03 EST" name="Default suite" finished-at="2023-03-06T21:15:07 EST" duration-ms="4786">
     <groups>
     </groups>
-    <test started-at="2023-03-06T21:03:27 EST" name="Default test" finished-at="2023-03-06T21:03:32 EST" duration-ms="5464">
+    <test started-at="2023-03-06T21:15:03 EST" name="Default test" finished-at="2023-03-06T21:15:07 EST" duration-ms="4786">
       <class name="com.API.Tests.getTests">
-        <test-method signature="getEmployeeDetails()[pri:0, instance:com.API.Tests.getTests@2f112965]" started-at="2023-03-06T21:03:27 EST" name="getEmployeeDetails" finished-at="2023-03-06T21:03:32 EST" duration-ms="5403" status="PASS">
+        <test-method signature="getEmployeeDetails()[pri:0, instance:com.API.Tests.getTests@2f112965]" started-at="2023-03-06T21:15:03 EST" name="getEmployeeDetails" finished-at="2023-03-06T21:15:07 EST" duration-ms="4724" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getEmployeeDetails -->

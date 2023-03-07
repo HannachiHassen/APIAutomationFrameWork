@@ -1,9 +1,10 @@
 package com.API.Tests;
 
-import static io.restassured.RestAssured.given;
-
 import static org.assertj.core.api.Assertions.*;
 import org.testng.annotations.Test;
+
+import com.API.utils.ApiUtils;
+
 import io.restassured.response.Response;
 
 public final class getTests {
@@ -11,10 +12,8 @@ public final class getTests {
 	@Test 
 	public void getEmployeesDetails() {
 		
-		Response response=given()
-				.baseUri("http://localhost:3000")
-				.log()
-				.all()
+		Response response=ApiUtils
+				.buildRequestForGetCall()
 				.get("/employees");  //class or config.properties	
 		response.prettyPrint();
 		
@@ -29,10 +28,8 @@ public final class getTests {
 	@Test 
 	public void getEmployeeDetails() {
 		
-		Response response=given()
-				.baseUri("http://localhost:3000")
-				.log()
-				.all()								
+		Response response=ApiUtils
+				.buildRequestForGetCall()							
 				.pathParam("id", 2)
 				.get("/employees/{id}");  //class or config.properties	
 		response.prettyPrint();
